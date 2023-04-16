@@ -1,0 +1,21 @@
+{
+  "name": "ESP32S3_BOX TFT Touch",
+  "keywords": "Adafruit GFX Capacitive Touch Screen TT21100 TFT Display ST7789 320x240",
+  "description": "Adafruit GFX SPI compatible library for the ESP32S3-BOX board with Touch Screen driver. TFT ST7789 320x240. Capacitive Touch Screen TT21100",
+  "license": "MIT",
+  "repository":
+  {
+    "type": "git",
+    "url": "https://github.com/SuGlider/Adafruit_ESP32S3_BOX"
+  },
+  "authors":
+  [
+    {
+      "name": "Rodrigo Garcia",
+      "maintainer": true
+    }
+  ],
+  "version": "1.0.0",
+  "frameworks": "arduino",
+  "platforms": "espressif32"
+}

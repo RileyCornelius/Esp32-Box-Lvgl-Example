@@ -1,0 +1,40 @@
+######################################
+# Syntax Coloring Map For ESP32S3-BOX
+######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+TS_Point	KEYWORD1	TS_Point
+ESP32S3BOX_TS	KEYWORD1	ESP32S3BOX_TS
+ESP32S3BOX_TFT	KEYWORD1	ESP32S3BOX_TFT
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+init	KEYWORD2
+setRotation	KEYWORD2
+setAddrWindow	KEYWORD2
+enableDisplay	KEYWORD2
+enableTearing	KEYWORD2
+enableSleep	KEYWORD2
+begin	KEYWORD2
+touched	KEYWORD2
+getPoint	KEYWORD2
+
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+ESP32S3BOX_TFTWIDTH	LITERAL1
+ESP32S3BOX_TFTHEIGHT	LITERAL1
+ST7789_BLACK	LITERAL1
+ST7789_WHITE	LITERAL1
+ST7789_RED	LITERAL1
+ST7789_GREEN	LITERAL1
+ST7789_BLUE	LITERAL1
+ST7789_CYAN	LITERAL1
+ST7789_MAGENTA	LITERAL1
+ST7789_YELLOW	LITERAL1
+ST7789_ORANGE	LITERAL1
