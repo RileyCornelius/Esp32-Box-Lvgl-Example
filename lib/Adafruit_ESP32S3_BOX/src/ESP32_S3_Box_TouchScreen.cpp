@@ -85,13 +85,13 @@ TS_Point ESP32S3BOX_TS::getPoint(uint8_t n) {
 }
 
 TS_Point::TS_Point(void) {
-  x = y = z = 0;
+  x = y = p = 0;
 }
 
 TS_Point::TS_Point(int16_t _x, int16_t _y, int16_t _z) {
   x = _x;
   y = _y;
-  z = _z;
+  p = _z;
 }
 
 bool TS_Point::operator==(TS_Point p1) {
