@@ -15,7 +15,7 @@
               {
                 "nid": -391186094,
                 "strtype": "OBJECT/Name",
-                "strval": "clock",
+                "strval": "time",
                 "InheritedType": 10
               },
               {
@@ -1587,9 +1587,9 @@
     "theme_dark": false,
     "theme_color1": 5,
     "theme_color2": 0,
-    "exportFolderPath": "C:\\Projects\\01-Current\\LVGL\\M5Stack-Core2-Lvgl-Example\\src\\ui",
-    "projectExportFolderPath": "C:\\Projects\\01-Current\\LVGL\\M5Stack-Core2-Lvgl-Example\\ui_square_line\\export",
-    "backup_cnt": 10,
+    "exportFolderPath": "C:\\Projects\\01-Current\\LVGL\\Esp32-Box-Lvgl-Example\\src\\ui",
+    "projectExportFolderPath": "C:\\Projects\\01-Current\\LVGL\\example_project",
+    "backup_cnt": 12,
     "autosave_cnt": 0,
     "lvgl_version": "8.2.0",
     "callfuncsexport": "DONT_EXPORT",
