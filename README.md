@@ -1,5 +1,5 @@
 # Esp32-Box-Lvgl-Example
-Example project using LVGL, TFT_eSPI, PlatformIO and Arduino framework on the Espressif Esp32 Box board.
+Example project using LVGL, LGFX, PlatformIO and Arduino framework on the Espressif Esp32 Box board.
 
 YouTube Video: https://youtu.be/pntRY4jXvrE
 
