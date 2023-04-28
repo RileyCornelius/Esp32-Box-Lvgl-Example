@@ -1,5 +1,8 @@
 # Esp32-Box-Lvgl-Example
+
 Example project using LVGL, TFT_eSPI, PlatformIO and Arduino framework on the Espressif Esp32 Box board.
+
+New [LGFX Branch](https://github.com/RileyCornelius/Esp32-Box-Lvgl-Example/tree/LGFX) replaces TFT_eSPI driver with LovyanGFX.
 
 YouTube Video: https://youtu.be/pntRY4jXvrE
 
