@@ -1,16 +1,16 @@
 
 #include <Arduino.h>
 #include <lvgl.h>
-#include <TFT_eSPI.h>
-#include <ESP32_S3_Box_TouchScreen.h>
+
+#define LGFX_AUTODETECT // Automatically detect the display of esp32-box from Arduino defines
+#include <LovyanGFX.hpp>
 
 /* Esp32-box screen size */
 #define LV_SCREEN_WIDTH 320
 #define LV_SCREEN_HEIGHT 240
 #define LV_BUF_SIZE (LV_SCREEN_WIDTH * LV_SCREEN_HEIGHT)
 
-TFT_eSPI tft = TFT_eSPI(LV_SCREEN_WIDTH, LV_SCREEN_HEIGHT);
-ESP32S3BOX_TS ts = ESP32S3BOX_TS();
+LGFX tft; // Touch screen object
 
 /* Display flushing */
 static void my_disp_flush(lv_disp_drv_t *disp, const lv_area_t *area, lv_color_t *color_p)
@@ -27,13 +27,14 @@ static void my_disp_flush(lv_disp_drv_t *disp, const lv_area_t *area, lv_color_t
 /* Read the touchpad */
 static void my_touchpad_read(lv_indev_drv_t *indev_driver, lv_indev_data_t *data)
 {
-    if (ts.touched())
+    uint16_t x, y;
+    bool touched = tft.getTouch(&x, &y);
+    if (touched)
     {
-        TS_Point p = ts.getPoint(); // Retrieve a point
-        data->point.x = p.x;
-        data->point.y = p.y;
+        data->point.x = x;
+        data->point.y = y;
         data->state = LV_INDEV_STATE_PR;
-        // Serial.println("X = " + String(p.x) + " Y = " + String(p.y) + " Pressure = " + String(p.p));
+        // Serial.println("X = " + String(x) + " Y = " + String(y));
     }
     else
     {
@@ -44,12 +45,8 @@ static void my_touchpad_read(lv_indev_drv_t *indev_driver, lv_indev_data_t *data
 /* Setup lvgl with display and touch pad */
 void lv_begin()
 {
-    /*Initialize the display driver*/
+    /*Initialize the display and touch driver*/
     tft.init();
-    tft.setRotation(3);
-
-    /*Initialize the touch driver*/
-    ts.begin();
 
     /* Call before other lv functions */
     lv_init();
@@ -89,7 +86,7 @@ void lv_handler()
     if (millis() - previousUpdate > interval)
     {
         previousUpdate = millis();
-        uint32_t interval = lv_timer_handler(); // Update the UI
+        interval = lv_timer_handler(); // Update the UI
         // Serial.println(interval);
     }
 }
